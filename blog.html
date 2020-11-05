@@ -17,17 +17,53 @@
 <body>
     <section class="bts">
         <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
-            <div class="container"><img src="assets/img/Bintari_logo.png"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="container"><img src="assets/img/Bintari_logo.png" class="img-fluid mr-4"><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse"
                     id="navcol-1">
                     <ul class="nav navbar-nav mr-auto">
                         <li class="nav-item" role="presentation"><a class="nav-link active" href="index.html">HOME</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="tentang-kami.html">TENTANG KAMI</a></li>
+                        <!--
                         <li class="nav-item" role="presentation"><a class="nav-link" href="program.html">PROGRAM</a></li>
+                        -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="program.html" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              PROGRAM
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                              <li><a class="dropdown-item" href="#">Action</a></li>
+                              <li><a class="dropdown-item" href="#">Another action</a></li>
+                              <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Submenu</a>
+                                <ul class="dropdown-menu">
+                                  <li><a class="dropdown-item" href="#">Submenu action</a></li>
+                                  <li><a class="dropdown-item" href="#">Another submenu action</a></li>
+                    
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Subsubmenu</a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                                      <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                                    </ul>
+                                  </li>
+                                  <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle" href="#">Second subsubmenu</a>
+                                    <ul class="dropdown-menu">
+                                      <li><a class="dropdown-item" href="#">Subsubmenu action</a></li>
+                                      <li><a class="dropdown-item" href="#">Another subsubmenu action</a></li>
+                                    </ul>
+                                  </li>
+                    
+                                </ul>
+                              </li>
+                            </ul>
+                        </li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="publikasi.html">PUBLIKASI</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="blog.html">BLOG</a></li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="#">KONTAK KAMI</a></li>
-                    </ul><span class="navbar-text actions"> </span><img class="iconss" src="assets/img/005-indonesia.png"><img class="iconss" src="assets/img/007-united-states-of-america.png"></div>
+                        
+                    </ul>
+                    <span class="navbar-text actions"> </span>
+                    <img class="iconss" src="assets/img/005-indonesia.png">
+                    <img class="iconss" src="assets/img/007-united-states-of-america.png">
+                </div>
             </div>
         </nav>
     </section>
@@ -235,6 +271,23 @@
     </section>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+        if (!$(this).next().hasClass('show')) {
+            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+        }
+        var $subMenu = $(this).next(".dropdown-menu");
+        $subMenu.toggleClass('show');
+
+
+        $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+            $('.dropdown-submenu .show').removeClass("show");
+        });
+
+
+        return false;
+        });
+    </script>
 </body>
 
 </html>

@@ -164,3 +164,29 @@ a:hover {
   border-radius: .25rem;
 }
 
+.navigation-clean-button.navbar-light .navbar-nav a.active, .navigation-clean-button.navbar-light .navbar-nav a.active:focus, .navigation-clean-button.navbar-light .navbar-nav a.active:hover {
+  color: #ffffff !important;
+  box-shadow: none;
+  background: none;
+  pointer-events: none;
+  background-color: #b6d241 !important;
+}
+
+/* Dropdown menu*/
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu a::after {
+  transform: rotate(-90deg);
+  position: absolute;
+  right: 6px;
+  top: .8em;
+}
+
+.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: .1rem;
+  margin-right: .1rem;
+}
