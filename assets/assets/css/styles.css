@@ -1,0 +1,89 @@
+.bts {
+  padding-right: 70px;
+  padding-left: 70px;
+}
+
+.section1 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.section4 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.section3 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+.section2 {
+  padding-top: 0px;
+  padding-bottom: 50px;
+  padding-left: 90px;
+  padding-right: 90px;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+a {
+  color: #c1c0c0;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #707070;
+  text-decoration: underline;
+}
+
+.card-link.link-custom {
+  font-family: 'Poppins';
+  font-size: 14px;
+  font-weight: 600;
+  color: #707070;
+}
+
+.btn-info {
+  color: #fff;
+  background-color: #578216;
+  border-color: #578216;
+}
+
+.btn:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.btn-info:hover {
+  color: #fff;
+  background-color: #699c1b;
+  border-color: #699c1b;
+}
+
+.btn-info.focus, .btn-info:focus {
+  color: #fff;
+  background-color: #578216;
+  border-color: #578216;
+  box-shadow: 0 0 0 .2rem rgb(160,191,113);
+}
+
+.btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show > .btn-info.dropdown-toggle {
+  color: #fff;
+  background-color: #699c1b;
+  border-color: #699c1b;
+}
+
+.btn-info:not(:disabled):not(.disabled).active:focus, .btn-info:not(:disabled):not(.disabled):active:focus, .show > .btn-info.dropdown-toggle:focus {
+  box-shadow: 0 0 0 .2rem rgb(160,191,113);
+}
+
