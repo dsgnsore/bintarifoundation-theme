@@ -315,6 +315,7 @@ p {
 .col-sm-12.col-md-6.col-lg-6.col-xl-6.img-space-home {
   padding-left: 10px;
   padding-right: 20px;
+  padding-bottom: 0px;
 }
 
 .col-sm-12.col-md-6.col-lg-6.col-xl-6.img-space-home2 {
@@ -477,7 +478,7 @@ p {
 
 .border-custom-3 {
   border: 1px solid #dee2e6!important;
-  padding: 20px;
+  padding: 10px;
 }
 
 .panel-img-blog-3 {
