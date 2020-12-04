@@ -16,8 +16,8 @@
 
 <body>
     <!-- NAVIGASI -->
-    <section class="bts">
-        <nav class="navbar navbar-light navbar-expand-md navigation-clean-button">
+    <section class="bts navbar-space">
+        <nav class="navbar navbar-light navbar-expand-lg navigation-clean-button">
             <div class="container"><img src="assets/img/Bintari_logo.png" class="img-fluid mr-4"><button
                     data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle
                         navigation</span><span class="navbar-toggler-icon"></span></button>
@@ -30,32 +30,49 @@
                         <!--
                         <li class="nav-item" role="presentation"><a class="nav-link" href="program.html">PROGRAM</a></li>
                         -->
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown has-megamenu">
                             <a class="nav-link dropdown-toggle" href="program.html" id="navbarDropdownMenuLink"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 PROGRAM
                             </a>
-
-                            <ul class="dropdown-menu mega-menu show" aria-labelledby="navbarDropdownMenuLink">
+                            <div class="dropdown-menu megamenu" role="menu" aria-labelledby="navbarDropdownMenuLink">
                                 <div class="row">
-                                    <div class="col-lg-3">
-                                        <li><a class="dropdown-item" href="#">Lingkup Kerja</a></li>
-                                        <li><a class="dropdown-item" href="#">Pendekatan</a></li>
-                                        <li><a class="dropdown-item" href="#">Inisiatif</a></li>
-                                        <li><a class="dropdown-item" href="#">Project History</a></li>
+                                    <div class="col-md-3">
+                                        <div class="col-megamenu">
+                                            <ul class="list-unstyled">
+                                                    <li><a class="dropdown-item" href="#">Lingkup Kerja</a></li>
+                                                    <li><a class="dropdown-item" href="#">Pendekatan</a></li>
+                                                    <li><a class="dropdown-item" href="#">Inisiatif</a></li>
+                                                    <li><a class="dropdown-item" href="#">Project History</a></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <div class="col-lg-3">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    </div>
-                                    <div class="col-lg-3">
-                                        <li><a class="dropdown-item" href="#">Action</a></li>
-                                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    </div>
+
+                                    <div class="col-md-3">
+                                            <div class="col-megamenu">
+                                                <ul class="list-unstyled">
+                                                        <li><a class="dropdown-item" href="#">Lingkup Kerja</a></li>
+                                                        <li><a class="dropdown-item" href="#">Pendekatan</a></li>
+                                                        <li><a class="dropdown-item" href="#">Inisiatif</a></li>
+                                                        <li><a class="dropdown-item" href="#">Project History</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-3">
+                                                <div class="col-megamenu">
+                                                    <ul class="list-unstyled">
+                                                            <li><a class="dropdown-item" href="#">Lingkup Kerja</a></li>
+                                                            <li><a class="dropdown-item" href="#">Pendekatan</a></li>
+                                                            <li><a class="dropdown-item" href="#">Inisiatif</a></li>
+                                                            <li><a class="dropdown-item" href="#">Project History</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
                                 </div>
+                            </div>
 
-
-                            </ul>
+                            
                         </li>
                         <li class="nav-item" role="presentation"><a class="nav-link" href="publikasi.html">PUBLIKASI</a>
                         </li>
@@ -439,20 +456,10 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script>
-        $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
-            if (!$(this).next().hasClass('show')) {
-                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
-            }
-            var $subMenu = $(this).next(".dropdown-menu");
-            $subMenu.toggleClass('show');
-
-
-            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
-                $('.dropdown-submenu .show').removeClass("show");
-            });
-
-
-            return false;
+        // jQuery code
+        // Prevent closing from click inside dropdown
+        $(document).on('click', '.dropdown-menu', function (e) {
+        e.stopPropagation();
         });
     </script>
 </body>
