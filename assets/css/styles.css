@@ -41,11 +41,6 @@ h6{
 }
 
 
-.dropdown-menu.show {
-  display: block;
-}
-
-
 .bts {
   padding-right: 70px;
   padding-left: 70px;
@@ -221,6 +216,10 @@ a:hover {
 }
 
 /* Dropdown menu*/
+/*.dropdown-menu.show {
+  display: block;
+}
+
 .dropdown-submenu {
   position: relative;
 }
@@ -237,4 +236,17 @@ a:hover {
   left: 100%;
   margin-left: .1rem;
   margin-right: .1rem;
+}*/
+
+.dropdown-menu-custom{
+  min-width: 54rem !important;
+}
+
+.dropdown-item-custom{
+  padding : 10px;
+}
+
+.dropdown-menu-center{
+  right: -22rem;
+  left: -22rem;
 }
